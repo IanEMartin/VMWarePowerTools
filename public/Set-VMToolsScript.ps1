@@ -14,10 +14,10 @@ function Set-VMToolsScript {
 
   Begin {
     $VMToolsScriptFileName = 'VMToolsScript.ps1'
-    if ($null -eq $Path) {
+    if ('' -eq $Path) {
       $Path = '{0}\Temp\{1}' -f $env:LOCALAPPDATA, $VMToolsScriptFileName
     }
-    if ($null -eq $DestinationPath) {
+    if ('' -eq $DestinationPath) {
       $Path = '{0}\VMTools\{1}' -f $env:ProgramData, $VMToolsScriptFileName
     }
   }
